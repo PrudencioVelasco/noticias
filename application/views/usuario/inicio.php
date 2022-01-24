@@ -48,7 +48,8 @@
                             <?php echo $this->session->nombre.' '.$this->session->apellidop; ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?= base_url('/welcome/logoute') ?>">Salir</a> 
+                          
+                        <a class="dropdown-item" href="<?= base_url('/welcome/logoute') ?>">Salir</a> 
                         </div>
                     </li>
                     <?php } ?>
@@ -64,6 +65,8 @@
         <div class="container">
             <br>
             <div v-for="(imagen2,index2) in noticias">
+            {{imagen2.titulo.lenght}}
+            <p v-if="imagen2.titulo.lenght">WORKING</p>
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
@@ -73,11 +76,12 @@
 
                                 <div class="mb-1 text-muted small">{{imagen2.fecharegistro}}</div>
                                 <p class="card-text mb-auto" v-html="imagen2.contenido">.</p>
+                               
                                 <a class="btn btn-outline-primary btn-sm" role="button" style="margin-bottom: 12px;"  v-bind:href="'./leer/'+ imagen2.idnoticia">Seguir leyendo</a>
                                 
 
                             </div>
-                            <img class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" v-bind:src="url_image+ imagen2.imagenes[0].nombreimagen" style="width: 200px; height: 250px;">
+                            <img v-if="imagen2.imagenes != ''" class="card-img-right flex-auto d-none d-lg-block" alt="Thumbnail [200x250]" v-bind:src="url_image+ imagen2.imagenes[0].nombreimagen" style="width: 200px; height: 250px;">
                         </div>
                     </div>
                     <div class="col-md-2"></div>

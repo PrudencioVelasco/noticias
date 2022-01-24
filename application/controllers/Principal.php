@@ -10,11 +10,13 @@ class Principal extends CI_Controller {
         $this->load->helper('url'); 
         $this->load->library('session');
         $this->load->library('encryption'); 
+        $this->load->library('permission');
 		$this->load->model('noticia_model', 'noticia');
         $this->load->model('comentario_model', 'comentario');
     }
     public function index()
     {
+        
         $this->load->view('usuario/inicio');
     }
 	public function login()
@@ -23,7 +25,7 @@ class Principal extends CI_Controller {
 	}
     
     public function leer($idnoticia)
-    {
+    { 
         $data = array(
             'idnoticia'=>$idnoticia
         );

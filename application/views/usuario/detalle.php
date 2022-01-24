@@ -64,17 +64,16 @@
                     <div id="appcomentario">
                         <div class="card">
                             <div class="card-body">
-                                <h2 class="card-title text-left" v-html="detallenoticia.titulo"></h2>
-                                <h4 class="card-subtitle">
-                                    <div v-html="detallenoticia.contenido"></div>
-                                </h4>
+                                
                                 <div class="row">
-                                    <div class="col-lg-2"></div>
-                                    <div class="col-lg-8" class="text-center">
+                                    <div class="col-lg-1"></div>
+                                    <div class="col-lg-10" class="text-center">
                                         <div class="card">
                                             <div class="card-body">
-
-                                                <img  v-bind:src="url_image + imagenes[0].nombreimagen" class="img-responsive  product" alt="Responsive image" width="40%">
+                                            <h2 class="card-title text-left" v-html="detallenoticia.titulo"></h2>
+                                <h4 class="card-subtitle">
+                                    <div v-html="detallenoticia.contenido"></div>
+                                                <img  v-if=" imagenes != ''" v-bind:src="url_image + imagenes[0].nombreimagen" class="img-responsive  product" alt="Responsive image" width="20%">
                                                 <br>
                                                 <div class="text-right">Publicado el: {{detallenoticia.fecharegistro}}</div>
                                                 <div class="text-right">Autor: {{detallenoticia.nombre}} {{detallenoticia.apepaterno}} {{detallenoticia.apematerno}}</div>

@@ -19,7 +19,7 @@ class Permission
         $permissions = self::$_CI->db->select('p.uri, r.idrol')
             ->from('tblpermiso p')
             ->join('tblrol r', 'p.idrol = r.idrol')
-            ->join('tblusuario u', 'u.idrol = r.idtol') 
+            ->join('tblusuario u', 'u.idrol = r.idrol') 
             ->where('u.idusuario', $user_id)
             ->get()
             ->result();
@@ -94,7 +94,7 @@ class Permission
         $permissions = self::$_CI->db->select('p.uri, r.idrol')
             ->from('tblpermiso p')
             ->join('tblrol r', 'p.idrol = r.idrol')
-            ->join('tblusuario u', 'u.idrol = r.idtol') 
+            ->join('tblusuario u', 'u.idrol = r.idrol') 
             ->where('u.idusuario', $user_id)
             ->get()
             ->result();

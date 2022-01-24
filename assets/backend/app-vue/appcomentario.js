@@ -60,27 +60,25 @@ var c = new Vue({
         },
         todosComentarios() {
             axios.get(this.url + "Noticia/getItem/" + this.idnoticia)
-                .then(function (response) {
-                    console.log(response);
+                .then(function (response) { 
                     c.comentarios = response.data;
                 });
         },
         imagenesNoticia() {
             axios.get(this.url + "Noticia/imagenesNoticia/" + this.idnoticia)
                 .then(function (response) {
-                    console.log(response);
+                    console.log(response.data.imagenes);
                     c.imagenes = response.data.imagenes;
                 });
         },
         detalleNoticia() {
             axios.get(this.url + "Noticia/detalleNoticia/" + this.idnoticia)
-                .then(function (response) {
-                    console.log(response);
+                .then(function (response) { 
                     c.detallenoticia = response.data.detallenoticia;
                 });
         },
 
-        agregarComentario(){
+        agregarComentario(){ 
             console.log(c.idnoticia);
             c.cargando_registro = true;
             c.cargando = true;

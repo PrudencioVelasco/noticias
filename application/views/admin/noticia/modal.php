@@ -8,7 +8,7 @@
                 <div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 ">
-                            <label class="col-red" v-html="formValidate.msgerror"></label>
+                            <label class="text-danger" v-html="formValidate.msgerror"></label>
                         </div>
                     </div>
                     <div class="row">
@@ -36,7 +36,7 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 ">
                             <label>Imagenes</label>
-                            <input type="file" @change="onChangeFileUploadAdd" class="form-control" id="fileadd" ref="fileadd" name="po" multiple>
+                            <input type="file" @change="onChangeFileUploadAdd" class="form-control" accept="image/png, image/jpeg" id="fileadd" ref="fileadd" name="po" multiple>
                             <strong v-if=" filesSend.length > 0">Archivo(s) seleccionado(s):</strong>
                             <ul>
                                 <li v-for="file in filesSend" :key="file.name" style="list-style-type: none;">
@@ -87,7 +87,7 @@
                 <div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 ">
-                            <label class="col-red" v-html="formValidate.msgerror"></label>
+                            <label class="text-danger" v-html="formValidate.msgerror"></label>
                         </div>
                     </div>
                     <div class="row">
@@ -130,7 +130,7 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 ">
                             <label>Imagenes</label>
-                            <input type="file" @change="onChangeFileUploadAdd" class="form-control" id="fileadd" ref="fileadd" name="po" multiple>
+                            <input type="file" @change="onChangeFileUploadAdd" class="form-control" accept="image/png, image/jpeg" id="fileadd" ref="fileadd" name="po" multiple>
                             <strong v-if=" filesSend.length > 0">Archivo(s) seleccionado(s):</strong>
                             <ul>
                                 <li v-for="file in filesSend" :key="file.name" style="list-style-type: none;">

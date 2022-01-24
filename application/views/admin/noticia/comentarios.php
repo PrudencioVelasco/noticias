@@ -11,14 +11,16 @@
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8" class="text-center">
                             <div class="card">
-                                <div class="card-body">
-
+                                <div class="card-body"> 
+                <img  v-if=" imagenes != ''" v-bind:src="url_image + imagenes[0].nombreimagen" class="img-responsive  product" alt="Responsive image" width="10%">
+                     
                 
  
                                     <div class="text-right">Publicado el: {{detallenoticia.fecharegistro}}</div>
                                     <div class="text-right">Autor: {{detallenoticia.nombre}} {{detallenoticia.apepaterno}} {{detallenoticia.apematerno}}</div>
-                                </div>
+                                
                             </div>
+                        </div>
                         </div>
                         <div class="col-lg-2"></div>
                     </div>
