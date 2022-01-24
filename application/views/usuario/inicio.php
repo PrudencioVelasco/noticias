@@ -64,9 +64,7 @@
         </nav>
         <div class="container">
             <br>
-            <div v-for="(imagen2,index2) in noticias">
-            {{imagen2.titulo.lenght}}
-            <p v-if="imagen2.titulo.lenght">WORKING</p>
+            <div v-for="(imagen2,index2) in noticias"> 
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
@@ -75,7 +73,7 @@
                                 <strong class="d-inline-block mb-2 text-primary">{{imagen2.titulo}}</strong>
 
                                 <div class="mb-1 text-muted small">{{imagen2.fecharegistro}}</div>
-                                <p class="card-text mb-auto" v-html="imagen2.contenido">.</p>
+                                <p class="card-text mb-auto text-justify" v-html="imagen2.contenido">.</p>
                                
                                 <a class="btn btn-outline-primary btn-sm" role="button" style="margin-bottom: 12px;"  v-bind:href="'./leer/'+ imagen2.idnoticia">Seguir leyendo</a>
                                 

@@ -72,7 +72,7 @@
                                             <div class="card-body">
                                             <h2 class="card-title text-left" v-html="detallenoticia.titulo"></h2>
                                 <h4 class="card-subtitle">
-                                    <div v-html="detallenoticia.contenido"></div>
+                                    <div class="text-justify" v-html="detallenoticia.contenido"></div>
                                                 <img  v-if=" imagenes != ''" v-bind:src="url_image + imagenes[0].nombreimagen" class="img-responsive  product" alt="Responsive image" width="20%">
                                                 <br>
                                                 <div class="text-right">Publicado el: {{detallenoticia.fecharegistro}}</div>
@@ -87,8 +87,7 @@
                                 <h6 v-if="comentarios == ''" class="text-center">Pudes ser el primer en comentar</h6>
                                 <div v-if="comentarios == ''" class="text-center">
                                     <button class="btn btn-primary" v-if="idusuario != ''" @click="abrirModalRegistrarComentario()">Comentar</button>
-                                    <p v-if="idusuario == ''">*Es necesario inciar sesión para comentar.</p>
-                                </div>
+                                 </div>
                                 <div class="profiletimeline">
                                     <ul class="listacomentarios">
                         
