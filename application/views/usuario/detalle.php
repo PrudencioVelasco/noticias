@@ -52,11 +52,7 @@
                     <?php } ?>
 
                 </ul>
-
-                <div class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" ref="textbuscar" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-success my-2 my-sm-0" @click="buscarNoticias()">Buscar</button>
-                </div>
+ 
             </div>
         </nav>
         <div class="container">
@@ -78,7 +74,7 @@
                                         <div class="card">
                                             <div class="card-body">
 
-                                                <img class="center-center" v-bind:src="url_image + imagenes[0].nombreimagen" class="img-fluid" alt="Responsive image" width="50%">
+                                                <img  v-bind:src="url_image + imagenes[0].nombreimagen" class="img-responsive  product" alt="Responsive image" width="40%">
                                                 <br>
                                                 <div class="text-right">Publicado el: {{detallenoticia.fecharegistro}}</div>
                                                 <div class="text-right">Autor: {{detallenoticia.nombre}} {{detallenoticia.apepaterno}} {{detallenoticia.apematerno}}</div>
@@ -96,7 +92,7 @@
                                 </div>
                                 <div class="profiletimeline">
                                     <ul class="listacomentarios">
-                                        {{idusuario}}
+                        
                                         <li v-for="row  in comentarios">
                                             <hr>
                                             <div class="sl-item">

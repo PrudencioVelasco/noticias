@@ -21,7 +21,7 @@ class Usuario_model extends CI_Model
         $this->db->select('u.*');
         $this->db->from('tblusuario u'); 
         $this->db->where('u.usuario', $usuario); 
-        $this->db->where('u.idrol', 1); 
+        $this->db->where('u.idrol', 2); 
         $query = $this->db->get();
         if ($query->num_rows() > 0) {
             return $query->first_row();
