@@ -3,10 +3,17 @@
         <div id="appcomentario">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title text-left" v-html="detallenoticia.titulo"></h2>
+                   
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8"  >
+                        <h2 class="card-title text-justify" v-html="detallenoticia.titulo"></h2>
                     <h4 class="card-subtitle">
-                        <div v-html="detallenoticia.contenido"></div>
+                        <div  class="text-justify" v-html="detallenoticia.contenido"></div>
                     </h4>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-8" class="text-center">
