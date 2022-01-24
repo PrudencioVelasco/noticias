@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Admin Pro Admin Template - The Ultimate Bootstrap 4 Admin Template</title>
+    <title>Noticias</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>/assets/backend/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- page css -->
@@ -47,41 +47,43 @@
         <div class="login-register" style="background-color:#878e99;">
             <div class="login-box card">
                 <div class="card-body">
-                <div class="nav-get-started">
+                    <div class="nav-get-started">
 
-<?php if (isset($_SESSION['err'])) : ?>
-<script>
-swal({
-    type: 'error',
-    title: 'Oops...',
-    text: 'Usuario o contraseña son incorrectos',
-    footer: ''
-});
-</script>
-<?php endif ?>
-</div>
+                        <?php if (isset($_SESSION['err'])) : ?>
+                            <script>
+                                swal({
+                                    type: 'error',
+                                    title: 'Oops...',
+                                    text: 'Usuario o contraseña son incorrectos',
+                                    footer: ''
+                                });
+                            </script>
+                        <?php endif ?>
+                    </div>
                     <form class="form-horizontal form-material" id="loginform" method="POST" action="<?= base_url('welcome/externo') ?>">
                         <h3 class="box-title m-b-20">Usuario Externo</h3>
                         <div class="form-group ">
                             <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" name="usuario" placeholder="Usuario"> </div>
+                                <input class="form-control" type="text" required="" name="usuario" placeholder="Usuario">
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" type="password" required="" name="password" placeholder="Contrasena"> </div>
+                                <input class="form-control" type="password" required="" name="password" placeholder="Contrasena">
+                            </div>
                         </div>
-                        
+
                         <div class="form-group text-center">
                             <div class="col-xs-12 p-b-20">
                                 <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit">Entrar</button>
                             </div>
                         </div>
-                    </form> 
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
@@ -108,7 +110,7 @@ swal({
             $("#recoverform").fadeIn();
         });
     </script>
-    
+
 </body>
 
 </html>
